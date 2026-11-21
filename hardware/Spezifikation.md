@@ -13,7 +13,7 @@ Stand 21.11.2026. Quelle: Aufbau auf dem Breadboard (Tischtest Marcel Sauder, 20
 | Display mit Touch | 2,8 Zoll TFT SPI, 240 x 320, Treiber ILI9341, Touch XPT2046 (Modul MSP2807) | 1 | bestätigt |
 | Transistor | BC557 (PNP) | 1 | bestätigt (Marcel Sauder, 21.11.2026) |
 | Basiswiderstand | 1,5 kΩ | 1 | bestätigt (Marcel Sauder, 21.11.2026) |
-| Summer | aktiver Summer (piept bei angelegter Spannung) | 1 | Typ, Nennspannung, Strom: offen |
+| Summer | SFM-20B, aktiver Piezo Summer, Dauerton, ohne Marke (siehe 3.1) | 1 | Daten nach Händlerangabe, Strom: offen |
 | Stromversorgung | USB am D1 mini | 1 | Netzteil: offen |
 
 Nicht verwendet: externer Flash W25Q128 auf dem Display Modul, SD Slot.
@@ -51,6 +51,23 @@ GPIO Nummern für CS, DC, T_CS, LED und Summer stehen in `platformio.ini` und `s
 - Ton ein = D4 niedrig. D4 ist ein Bootpin und muss beim Start hoch sein. Der PNP sperrt bei hohem Pegel, der Summer ist beim Einschalten still.
 - Ein NPN Transistor an D4 klemmt den Pin über die Basis nach unten, das Gerät startet dann in einer Schleife neu (Tischtest 20.11.2026 mit NPN). Darum PNP.
 - Berechnung (nicht gemessen): Basisstrom etwa (3,3 V minus 0,7 V) / 1,5 kΩ = 1,7 mA. Mit der Faustregel «Basisstrom ein Zehntel des Kollektorstroms» trägt die Schaltung einen Summer bis etwa 17 mA. Der Strom des verwendeten Summers ist offen.
+### 3.1 Summer SFM-20B (Händlerangaben, nicht gemessen)
+
+| Angabe | Wert |
+|---|---|
+| Typ | aktiver Piezo Summer, Dauerton, ohne Marke |
+| Grösse | 23 x 12 mm |
+| Nennspannung | 12 V DC |
+| Betriebsspannung | 3 bis 24 V DC |
+| Arbeitsfrequenz | 3300 Hz, plus minus 500 Hz |
+| Schalldruck | 90 dB (die Produktseite nennt im Titel 95 dB: widersprüchlich) |
+| Arbeitstemperatur | minus 20 bis plus 80 Grad |
+| Stromaufnahme | nicht angegeben: offen |
+
+- Am D1 mini liegt der Summer an 3,3 V, abzüglich der Sättigungsspannung des BC557 sind es etwa 3,1 V, also knapp über der unteren Betriebsgrenze von 3 V (Berechnung, nicht gemessen). Der Ton ist dort leiser als die 90 dB bei Nennspannung.
+- Mit 5 V am Emitter ginge der PNP bei hohem Pegel von 3,3 V nicht mehr sicher zu (Basis liegt 1,7 V unter dem Emitter). Für einen lauteren Summer wäre eine andere Schaltung nötig (offen).
+- Lieferumfang der Bestellung: 5 Stück.
+
 - Piept der Summer im Ruhezustand, `BUZZER_ON` in `src/main.cpp` auf `HIGH` setzen.
 - Töne: jede Taste ein kurzer Klick, Eingabe komplett ein Ton (0,25 s).
 - Hinweis: In der Arbeitszeit Firmware stand bisher 1 kΩ im README. Gebaut und getestet ist 1,5 kΩ.
@@ -58,7 +75,7 @@ GPIO Nummern für CS, DC, T_CS, LED und Summer stehen in `platformio.ini` und `s
 ## 4. Für die Fertigung (Vorschlag, offen)
 
 - Platine mit Buchsenleisten für den D1 mini und das Display Modul (steckbar), BC557 und Widerstand bedrahtet oder SMD, Summer auf Pfostenstecker oder gelötet.
-- Offen: Summer Typ und Strom, Hintergrundlicht Strom (D0 direkt oder über Transistor), Stromversorgung (USB oder Hohlstecker mit Regler), Gehäuse und Montage, Stückzahl, Fertiger, Schaltplan und Gerber Dateien (noch nicht gezeichnet).
+- Offen: Summer Stromaufnahme und Lautstärke bei 3,3 V, Hintergrundlicht Strom (D0 direkt oder über Transistor), Stromversorgung (USB oder Hohlstecker mit Regler), Gehäuse und Montage, Stückzahl, Fertiger, Schaltplan und Gerber Dateien (noch nicht gezeichnet).
 - Vor der Bestellung ein Muster aufbauen und messen: Stromaufnahme mit und ohne Hintergrundlicht, Summerstrom, Temperatur im Dauerbetrieb.
 
 ## 5. Lizenz
