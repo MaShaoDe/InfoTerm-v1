@@ -1,0 +1,4 @@
+# Einstellungen ohne Geheimnisse (SPDX-License-Identifier: GPL-3.0-only)
+# Eine Zeile je Einstellung: name=wert
+# Name dieses Geraets (im Web Menue aenderbar)
+device_id=
