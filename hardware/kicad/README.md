@@ -3,7 +3,7 @@
 
 # InfoTerm v1: Schaltplan (KiCad)
 
-Stand 23.11.2026. Vorschlag, offen: `infoterm-v1.kicad_sch` wurde als Text geschrieben und nie in KiCad geöffnet oder geprüft (kein ERC). Beim Öffnen können Fehler auftreten. Schaltung nach `hardware/Spezifikation.md`.
+Stand 24.11.2026. Vorschlag, offen: `infoterm-v1.kicad_sch` wurde als Text geschrieben und nie in KiCad geöffnet oder geprüft (kein ERC). Beim Öffnen können Fehler auftreten. Schaltung nach `hardware/Spezifikation.md`.
 
 Hardware: CERN-OHL-P-2.0.
 
@@ -16,9 +16,17 @@ Hardware: CERN-OHL-P-2.0.
 | Q1 | BC557 (PNP), Beinchen C, B, E im Datenblatt prüfen | TO-92 |
 | R1 | 1,5 kΩ | Axial DIN0207 |
 | J4 | Pfostenstecker 1x2 für Summer | PinHeader_1x02 |
+| J5 | USB-C Buchse, nur Strom (16 Pin SMD, z.B. HRO TYPE-C-31-M-12), am Gehäuserand | USB_C_Receptacle_HRO_TYPE-C-31-M-12 |
+| R2, R3 | 5,1 kΩ an CC1 und CC2 gegen GND (nötig, sonst liefert ein USB-C Netzteil keine 5 V) | R_0805 |
+| F1 | rückstellende Sicherung (Polyfuse) 1 A, Wert: offen | Fuse_1206 |
+| C1, C2 | 220 µF Elko und 100 nF Keramik, 5 V gegen GND | CP_Radial_D6.3mm, C_0805 |
 
 ## Offen
 
 - Layout und Gerber fehlen.
 - Strom von Summer und Hintergrundlicht (D0 direkt) nicht gemessen.
-- Stromversorgung nur über USB am D1 mini.
+- Stromversorgung (Vorschlag): USB-C Buchse J5 auf dem PCB speist den 5V Pin des D1 mini. Netzteil: 5 V, Strom nicht gemessen.
+- D1 mini nie gleichzeitig über seine eigene USB Buchse und J5 speisen, bevor geklärt ist, ob der Klon eine Diode am 5V Pin hat (offen).
+- Pad Namen des Footprints (A4B9, B4A9, A1B12, B1A12, A5, B5, S1) gegen die KiCad Bibliothek prüfen (offen).
+- Buchse hat 0,5 mm Raster: Handlöten ohne Mikroskop heikel, Fertiger Bestückung oder grössere Buchse prüfen (offen).
+- Gehäuse: PCB am Rand verschrauben, Schlitz für die Buchse einplanen (offen).
