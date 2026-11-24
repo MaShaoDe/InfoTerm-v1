@@ -23,7 +23,7 @@ Hardware: CERN-OHL-P-2.0.
 
 ## Layout (Entwurf, offen)
 
-`infoterm-v1.kicad_pcb`: 71,12 x 63,5 mm, 2 Lagen, Leiterbahn 0,3 mm (Strom 0,5 mm), Via 0,8 / 0,4 mm, GND Fläche auf beiden Lagen, 4 Löcher M3 (3,81 mm vom Rand), 7 Testpunkte rechts (TP1 SCK, TP2 MOSI, TP3 3V3, TP4 5V, TP5 VBUS_RAW, TP6 und TP7 GND), Silkscreen mit Titel, D1 mini Umriss (ESP8266, USB links), Beschriftung J3 und Rückseite (Copyright, Version, Repo). Antennenbereich des D1 mini rechts ohne Kupfer (Annahme, offen: Lage mit echtem D1 mini auf einem 1:1 Ausdruck prüfen). Footprints aus der KiCad Bibliothek, Routing mit eigenem Skript. Eigene Abstands und Verbindungsprüfung ohne Befund, das ersetzt keinen DRC (DRC in KiCad offen).
+`infoterm-v1.kicad_pcb`: 71,12 x 63,5 mm, 2 Lagen, Leiterbahn 0,3 mm (Strom 0,5 mm), Via 0,8 / 0,4 mm, GND Fläche auf beiden Lagen, 4 Löcher M3 (3,81 mm vom Rand), 7 Testpunkte rechts (TP1 SCK, TP2 MOSI, TP3 3V3, TP4 5V, TP5 VBUS_RAW, TP6 und TP7 GND), Silkscreen mit Titel, D1 mini Umriss (ESP8266, USB rechts), Beschriftung J3 und Rückseite (Copyright, Version, Repo). D1 mini gedreht: Antenne links, ragt rund 4 mm über die Platinenkante, USB Ende rechts. Links an der Kante kein Kupfer (Annahme, offen: Lage mit echtem D1 mini auf einem 1:1 Ausdruck prüfen). Footprints aus der KiCad Bibliothek, Routing mit eigenem Skript. Eigene Abstands und Verbindungsprüfung ohne Befund, das ersetzt keinen DRC (DRC in KiCad offen).
 
 Annahmen (offen):
 - Display Modul steckt in J3 und ragt über den oberen Rand hinaus, D1 mini liegt mit dem USB Ende links. Pin 1 von J3 ist VCC: Seite am Modul prüfen.
