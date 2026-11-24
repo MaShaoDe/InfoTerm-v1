@@ -14,7 +14,7 @@ Stand 21.11.2026. Quelle: Aufbau auf dem Breadboard (Tischtest Marcel Sauder, 20
 | Transistor | BC557 (PNP) | 1 | bestätigt (Marcel Sauder, 21.11.2026) |
 | Basiswiderstand | 1,5 kΩ | 1 | bestätigt (Marcel Sauder, 21.11.2026) |
 | Summer | SFM-20B, aktiver Piezo Summer, Dauerton, ohne Marke (siehe 3.1) | 1 | Daten nach Händlerangabe, Strom: offen |
-| Stromversorgung | USB am D1 mini | 1 | Netzteil: offen |
+| Stromversorgung | USB-C Buchse auf dem PCB (Vorschlag), 2 x 5,1 kΩ an CC1 und CC2, Polyfuse, 220 µF, 100 nF, speist den 5V Pin | 1 | Vorschlag, Strom: offen |
 
 Nicht verwendet: externer Flash W25Q128 auf dem Display Modul, SD Slot.
 
@@ -75,7 +75,7 @@ GPIO Nummern für CS, DC, T_CS, LED und Summer stehen in `platformio.ini` und `s
 ## 4. Für die Fertigung (Vorschlag, offen)
 
 - Platine mit Buchsenleisten für den D1 mini und das Display Modul (steckbar), BC557 und Widerstand bedrahtet oder SMD, Summer auf Pfostenstecker oder gelötet.
-- Offen: Summer Stromaufnahme und Lautstärke bei 3,3 V, Hintergrundlicht Strom (D0 direkt oder über Transistor), Stromversorgung (USB oder Hohlstecker mit Regler), Gehäuse und Montage, Stückzahl, Fertiger, Schaltplan und Gerber Dateien (noch nicht gezeichnet).
+- Offen: Summer Stromaufnahme und Lautstärke bei 3,3 V, Hintergrundlicht Strom (D0 direkt oder über Transistor), Stromversorgung (Vorschlag: USB-C Buchse auf dem PCB, siehe Schaltplan), Gehäuse und Montage, Stückzahl, Fertiger, Schaltplan und Gerber Dateien (noch nicht gezeichnet).
 - Vor der Bestellung ein Muster aufbauen und messen: Stromaufnahme mit und ohne Hintergrundlicht, Summerstrom, Temperatur im Dauerbetrieb.
 
 ## 5. Lizenz
