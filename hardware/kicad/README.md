@@ -39,3 +39,5 @@ Annahmen (offen):
 - Symbol J5 nutzt jetzt die Original Pad Namen (A1, A4, A5, A9, A12, B1, B4, B5, B9, B12, SH).
 - Buchse hat 0,5 mm Raster: Handlöten ohne Mikroskop heikel, Fertiger Bestückung oder grössere Buchse prüfen (offen).
 - Gehäuse: PCB am Rand verschrauben, Schlitz für die Buchse einplanen (offen).
+
+- J3 (Display): JST XH B14B-XH-A, 14 polig, 2,5 mm Raster (nicht 2,54), senkrecht. Kabel: XH Buchse 14P Single Head, 200 mm, 22 AWG, anderes Ende am Display angelötet (Stiftleiste dort auslöten). Raster der Stiftleiste vor der Bestellung mit 32,5 mm von Pin 1 bis Pin 14 prüfen (offen).
