@@ -21,6 +21,15 @@ Hardware: CERN-OHL-P-2.0.
 | F1 | rückstellende Sicherung (Polyfuse) 1 A, Wert: offen | Fuse_1206 |
 | C1, C2 | 220 µF Elko und 100 nF Keramik, 5 V gegen GND | CP_Radial_D6.3mm, C_0805 |
 
+## Layout (Entwurf, offen)
+
+`infoterm-v1.kicad_pcb`: 66,04 x 58,42 mm, 2 Lagen, Leiterbahn 0,3 mm (Strom 0,5 mm), Via 0,8 / 0,4 mm, GND Fläche auf beiden Lagen, 4 Löcher M3. Platzierung und Routing mit eigenem Skript erzeugt, nicht in KiCad geöffnet. Eigene Abstandsprüfung (Bounding Box) und Verbindungsprüfung ohne Befund, das ersetzt keinen DRC.
+
+Annahmen (offen):
+- Display Modul steckt in J3 und ragt über den oberen Rand hinaus, D1 mini liegt mit dem USB Ende links. Pin 1 von J3 ist VCC: Seite am Modul prüfen.
+- Footprints sind eigene Nachbauten nach Standardmassen, nicht aus der KiCad Bibliothek. Die Geometrie von J5 (USB-C) stammt aus dem Gedächtnis und muss vor der Bestellung durch den Originalfootprint ersetzt werden.
+- Vor dem DRC alle Zonen füllen (Taste B).
+
 ## Offen
 
 - Layout und Gerber fehlen.
