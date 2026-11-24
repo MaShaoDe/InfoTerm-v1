@@ -41,4 +41,4 @@ Annahmen (offen):
 - Gehäuse: PCB am Rand verschrauben, Schlitz für die Buchse einplanen (offen).
 
 - J3 (Display): JST XH B14B-XH-A, 14 polig, 2,5 mm Raster (nicht 2,54), senkrecht. Kabel: XH Buchse 14P Single Head, 200 mm, 22 AWG, anderes Ende am Display angelötet (Stiftleiste dort auslöten). Raster der Stiftleiste vor der Bestellung mit 32,5 mm von Pin 1 bis Pin 14 prüfen (offen).
-- J4 (Summer): Schraubklemme 3,5 mm Raster, 2 polig (KF350-2P), Kabeleingang nach rechts. Footprint ist die KiCad Standardklemme Phoenix PT 1,5 3,5 mm als Platzhalter (offen: Bohrung 1,2 mm und Gehäusemasse der KF350 gegen die Massskizze prüfen).
+- J4 (Buzzer): Schraubklemme KF350-2P, 3,5 mm Raster, Kabeleingang nach rechts. Footprint nach Datenblatt (Gehäuse rund 7,5 x 8,8 mm, Draht 24 bis 18 AWG), Bohrung 1,2 mm angenommen (Stiftdurchmesser steht nicht im Datenblatt, offen: an der gelieferten Klemme messen).
