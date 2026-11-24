@@ -23,11 +23,11 @@ Hardware: CERN-OHL-P-2.0.
 
 ## Layout (Entwurf, offen)
 
-`infoterm-v1.kicad_pcb`: 66,04 x 58,42 mm, 2 Lagen, Leiterbahn 0,3 mm (Strom 0,5 mm), Via 0,8 / 0,4 mm, GND Fläche auf beiden Lagen, 4 Löcher M3. Platzierung und Routing mit eigenem Skript erzeugt, nicht in KiCad geöffnet. Eigene Abstandsprüfung (Bounding Box) und Verbindungsprüfung ohne Befund, das ersetzt keinen DRC.
+`infoterm-v1.kicad_pcb`: 66,04 x 58,42 mm, 2 Lagen, Leiterbahn 0,3 mm (Strom 0,5 mm), Via 0,8 / 0,4 mm, GND Fläche auf beiden Lagen, 4 Löcher M3. Footprints aus der KiCad Bibliothek, Routing mit eigenem Skript. Eigene Abstands und Verbindungsprüfung ohne Befund, das ersetzt keinen DRC (DRC in KiCad offen).
 
 Annahmen (offen):
 - Display Modul steckt in J3 und ragt über den oberen Rand hinaus, D1 mini liegt mit dem USB Ende links. Pin 1 von J3 ist VCC: Seite am Modul prüfen.
-- Footprints sind eigene Nachbauten nach Standardmassen, nicht aus der KiCad Bibliothek. Die Geometrie von J5 (USB-C) stammt aus dem Gedächtnis und muss vor der Bestellung durch den Originalfootprint ersetzt werden.
+- J5 (HRO TYPE-C-31-M-12) steht bündig an der unteren Kante, Schnittstelle zum Gehäuse (Schlitz) offen.
 - Vor dem DRC alle Zonen füllen (Taste B).
 
 ## Offen
@@ -36,6 +36,6 @@ Annahmen (offen):
 - Strom von Summer und Hintergrundlicht (D0 direkt) nicht gemessen.
 - Stromversorgung (Vorschlag): USB-C Buchse J5 auf dem PCB speist den 5V Pin des D1 mini. Netzteil: 5 V, Strom nicht gemessen.
 - D1 mini nie gleichzeitig über seine eigene USB Buchse und J5 speisen, bevor geklärt ist, ob der Klon eine Diode am 5V Pin hat (offen).
-- Pad Namen des Footprints (A4B9, B4A9, A1B12, B1A12, A5, B5, S1) gegen die KiCad Bibliothek prüfen (offen).
+- Symbol J5 nutzt jetzt die Original Pad Namen (A1, A4, A5, A9, A12, B1, B4, B5, B9, B12, SH).
 - Buchse hat 0,5 mm Raster: Handlöten ohne Mikroskop heikel, Fertiger Bestückung oder grössere Buchse prüfen (offen).
 - Gehäuse: PCB am Rand verschrauben, Schlitz für die Buchse einplanen (offen).
